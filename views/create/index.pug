@@ -1,0 +1,12 @@
+extends ../layout.pug
+
+block main
+    .container
+        h2 Create TODOS
+        form(action="/create" method ="POST")
+            input(type="text" name="title" placeholder ="Job title")
+            select(name="status")
+                option(value="New") New
+                option(value="Progress") Progress
+                option(value="Done") Done
+            input(type="submit" value="Submit")

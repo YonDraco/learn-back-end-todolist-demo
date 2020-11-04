@@ -1,0 +1,26 @@
+extends ../layout.pug
+
+block main
+    .container
+        h2 TODOS
+        ul.todos
+            li.row.head
+                .cell ID
+                .cell Title
+                .cell Status
+                if(auth)
+                    .cell Action
+            each todo in todoList
+                li.row
+                    .cell=todo._id
+                    .cell=todo.title
+                    .cell=todo.status
+                    if(auth)
+                        .cell
+                            a(href=`/delete/${todo._id}`) DELETE
+        .pager
+            if(pr)
+                a(href=`/?p=${pr}&n=${noPage}`) Pre
+            a(href="#")=` | ${page} | `
+            if(nxt)
+                a(href=`/?p=${nxt}&n=${noPage}`) Next

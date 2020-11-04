@@ -1,0 +1,53 @@
+dbTodo
+13032000
+
+//Connection string
+
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://<username>:<password>@cluster0.9qs4y.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+
+
+CAU TRUC THU MUC
+    - file public: chứa các tài nguyên chung như img, html,...
+    - file controllers: 
+    - file views: 
+    - file routes: 
+    - file models: chua database
+
+Back end :
+	Cài thư viện
+		cmd: npm init -y
+		cmd: npm i -s express
+
+	Cấu trúc của 1 sever
+		-Tạo 1 folder: public để chứa các tài nguyên dùng chung như ảnh .....
+		-Tạo 1 folder : controllers - nhận dl từ routing(routes)
+		{
+			Tạo home.js - Để nhận và trả dl cho routing
+		}
+		-Tạo 1 folder: routes - nhận dl từ Browser ( Request)
+		{
+			Tạo index.js - gọi các route khác ( chỉ dùng để gọi các roter khác) 
+			Tạo home.js ứng với từng controllers ( nhận dl từ controller)
+		}
+		-Tạo 1 file server.js ( coppi từ https://expressjs.com/en/starter/hello-world.html)
+		{
+			add vaò file router vào 
+			Đây là file sử lý dl chính
+		}
+        - file views
+        {
+            Cài đặt công cụ views engine: sử dụng pug
+                npm i -s pug
+            file layout.pug: xây dựng lên khung của trang web sử dụng pug
+        }
+
+Mỗi file controllers thường có 1 folder riêng trong folder views (ten fille trong home cuar folder view trung voi ten cua file trong controller)

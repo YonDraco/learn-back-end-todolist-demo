@@ -1,0 +1,10 @@
+extends ../layout.pug
+
+block main
+    .container
+        h2 Login 
+        form(action="/login" method ="POST")
+            input(type="text" name="username" placeholder ="user name")
+            input(type="password" name="password" placeholder ="PassWord")
+
+            input(type="submit" value="Submit")

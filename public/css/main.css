@@ -1,0 +1,54 @@
+.menu {
+    background-color: antiquewhite;
+}
+
+.menu-item {
+    list-style: none;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 1px solid black;
+}
+
+.menu-item:hover {
+    background-color: coral;
+}
+
+.menu-item a {
+    text-decoration: none;
+}
+
+.menu-item a:hover {
+    text-decoration: none;
+    color: yellow;
+}
+
+footer {
+    background-color: tomato;
+    text-transform: uppercase;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.todos {
+    display: inline-block;
+}
+
+.row {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+
+.head {
+    background-color: #ececec;
+}
+
+.cell {
+    width: 200px;
+    border-right: 1px solid black;
+}
